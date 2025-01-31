@@ -44,25 +44,27 @@ The project focuses on the following key areas:
 
    Must have Docker Desktop installed. https://docs.docker.com/get-started/get-docker/
 
-2. **Run MongoDB as a Docker Container**
+   Dataset Here https://imisathena-my.sharepoint.com/personal/stavmars_imis_athena-innovation_gr/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fstavmars%5Fimis%5Fathena%2Dinnovation%5Fgr%2FDocuments%2Fmongo%5Flab%5Fproject%2Ftripadvisor%5Feuropean%5Frestaurants%2Ezip&parent=%2Fpersonal%2Fstavmars%5Fimis%5Fathena%2Dinnovation%5Fgr%2FDocuments%2Fmongo%5Flab%5Fproject&ga=1
+
+3. **Run MongoDB as a Docker Container**
    ```powershell
    docker run -d -p 27017:27017 --name MONGO_CONTAINER mongo:latest
    ```
 
-3. **Setup MongoDB in Docker**
+4. **Setup MongoDB in Docker**
    ```bash
    docker run --name MONGO_CONTAINER -d mongo
    ```
-4. **Copy Dataset to Container**
+5. **Copy Dataset to Container**
    ```powershell
    docker cp path/to/tripadvisor_european_restaurants.json MONGO_CONTAINER:/tmp/
    ```
-5. **Import Data into MongoDB**
+6. **Import Data into MongoDB**
    ```bash
    docker exec -it MONGO_CONTAINER bash
    mongoimport --db TripAdvisor --collection restaurants --file /tmp/tripadvisor_european_restaurants.json --jsonArray
    ```
-6. **Run Queries in MongoDB Shell**
+7. **Run Queries in MongoDB Shell**
    ```bash
    mongosh
    use TripAdvisor
