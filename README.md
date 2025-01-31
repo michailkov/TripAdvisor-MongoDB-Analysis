@@ -74,10 +74,6 @@ The project focuses on the following key areas:
 ## Conclusion
 This project demonstrates the power of **MongoDB** in handling large-scale datasets efficiently. Through **indexing and query optimization**, we significantly improved performance, making complex queries **faster and more scalable**. The insights derived from the dataset provide valuable information about restaurant trends across Europe.
 
-## Author
-**Michalis Koveos**  
-University of Piraeus  
-Email: mixalis.koveos@gmail.com  
 
 ## License
 This project is for educational purposes only.
